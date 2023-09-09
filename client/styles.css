@@ -4,25 +4,31 @@ body {
     margin: 0;
     padding: 0;
     background-color: #03a9f4; /* Vibrant blue background color for the entire page */
-    color: #fff; /* Text color */
+    color: black; /* Text color */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
 
 .container {
-    background-color: #ff69b4; /* Pink background color for the container */
+    background-color: white; /* Pink background color for the container */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    height: 30%;
 }
 
 input[type="url"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #717171;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
     border-radius: 4px;
     background-color: #fff; /* White background color for input fields */
 }
@@ -49,3 +55,5 @@ a {
     text-decoration: none;
     color: #03a9f4; /* Blue link color */
 }
+
+/* Add more custom styles as needed */

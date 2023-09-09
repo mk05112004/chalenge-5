@@ -9,17 +9,17 @@ urlForm.addEventListener('submit', async (e) => {
 
     try {
         // Send the original URL to your backend to generate a shortcut URL
-        const response = await fetch('/api/generateShortcut', {
+        const response = await fetch("http://localhost:8080/api/shorten", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ originalURL }),
+            body: JSON.stringify({ url : originalURL }),
         });
 
         if (response.ok) {
             const data = await response.json();
-            shortcutURLDisplay.innerHTML = `Shortcut URL: <a href="${data.shortcutURL}" target="_blank">${data.shortcutURL}</a>`;
+            shortcutURLDisplay.innerHTML = `Shortcut URL: <a href="/${data.longUrl}  >${data.shortUrl}</a>`;
         } else {
             // Handle errors here
             console.error('Error generating shortcut URL');
