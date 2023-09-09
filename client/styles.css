@@ -1,13 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0;
     background-color: #03a9f4; /* Vibrant blue background color for the entire page */
     color: black; /* Text color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    display: grid;
+    place-items: center;
     height: 100vh;
     
 }
@@ -18,13 +22,17 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 50%;
-    height: 30%;
+    height: auto;
+    display: grid;
+    
+
 }
 
 input[type="url"] {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
+    
     border: 1px solid #717171;
     font-size: 16px;
     font-weight: bold;
@@ -54,6 +62,25 @@ p {
 a {
     text-decoration: none;
     color: #03a9f4; /* Blue link color */
+}
+
+.OneUrl {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: green;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f2f1f2;
+    & > :is(.full , .short) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        & > a {
+            margin-top: 6%;
+            word-break: break-all;
+        }
+    }
+ 
 }
 
 /* Add more custom styles as needed */

@@ -16,22 +16,23 @@ app.get("/", (req, res) => {
   return res.status(200).json({ messages: "hello world" });
 });
 
-
+app.get("/api/data" , (req , res)=>{
+  return res.status(200).json({url : data.url})
+})
 
 app.post("/api/shorten", (req, res) => {
     const { url } = req.body;
     const shortUrl = shortid.generate();
-    
-    data = { short: shortUrl, long: url }
-    
+    data.url.push({shortUrl : shortUrl , fullUrl : url})
     fs.writeFileSync(path.resolve(__dirname, "data.json"), JSON.stringify(data));
-    
-    return res.status(200).json({ shortUrl, longUrl: url });
+    res.status(200).json(data);
   });
 
 
 app.get("/:shortUrl", (req, res) => {
-  return res.redirect(data.long)
+  const {shortUrl} = req.params
+  const findShort = data.url.find(url=>url.short == shortUrl)
+  return res.redirect(findShort.fullUrl)
 });
 
 const PORT = 8080;
