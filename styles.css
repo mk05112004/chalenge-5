@@ -1,50 +1,51 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    text-align: center;
     margin: 0;
     padding: 0;
+    background-color: #03a9f4; /* Vibrant blue background color for the entire page */
+    color: #fff; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
+    background-color: #ff69b4; /* Pink background color for the container */
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type="text"] {
+input[type="url"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* White background color for input fields */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ffbd69; /* Vibrant yellow button color */
     color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff9a8b; /* Button color on hover */
 }
 
-.result {
-    text-align: center;
-    margin-top: 20px;
+p {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-/* Add more custom styles as needed */
+a {
+    text-decoration: none;
+    color: #03a9f4; /* Blue link color */
+}
