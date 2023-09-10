@@ -21,7 +21,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
+    width: 75%;
     height: auto;
     display: grid;
     
@@ -48,6 +48,7 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 button:hover {
@@ -59,8 +60,9 @@ p {
     margin-top: 10px;
 }
 
-a {
+a , .shortUrlText {
     text-decoration: none;
+    cursor: pointer;
     color: #03a9f4; /* Blue link color */
 }
 
@@ -69,16 +71,29 @@ a {
     grid-template-columns: repeat(2,1fr);
     background-color: green;
     margin-bottom: 10px;
-    padding: 10px;
+    
     border-radius: 4px;
     background-color: #f2f1f2;
+    padding: 10px;
     & > :is(.full , .short) {
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        margin-top: 0%;
+        & > .shortUrlText {
+            margin-top: 5%;
+            word-break: break-all;
+            background-color: transparent;
+            color: #03a9f4;
+            font-size: 1.1rem;
+          
+        }
+
         & > a {
-            margin-top: 6%;
+            margin-top: 0%;
             word-break: break-all;
         }
+
+        
     }
  
 }
