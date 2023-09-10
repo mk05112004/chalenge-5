@@ -42,7 +42,7 @@ urlForm.addEventListener('submit', async (e) => {
                         </div>
                         <div class="short">
                             <p>Short Url : </p>
-                                <p class="shortUrlText" onClick="shortUrlPath('${url.shortUrl}')"> ${url.shortUrl}</p>
+                                <a  onClick="shortUrlPath('${url.shortUrl}')" href="${url.fullUrl}"> ${url.shortUrl}</a>
                         </div>
                     `;
                     allUrl.appendChild(uniqueDiv);
@@ -70,7 +70,7 @@ const shortUrlPath =async(shortPath)=>{
        }
     
     } catch (error) {
-        
+        console.log("ERROR : "+ error.message)
     }
     
 

@@ -3,8 +3,8 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #ff6f61, #ffbd69, #03a9f4, #7d63ff); /* Gradient background */
-    color: #fff; /* Text color */
+    background: linear-gradient(45deg, #ff6f61, #ffbd69, #03a9f4, #7d63ff);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the container */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    color: #333; /* Dark text color */
+    color: #333; 
 }
 
 input[type="email"],
@@ -30,11 +30,11 @@ input[type="password"] {
     margin-bottom: 20px;
     border: 3px solid #ccc;
     border-radius: 7px;
-    background-color: #f9f9f9; /* Light gray background for input fields */
+    background-color: #f9f9f9; 
 }
 
 button[type="submit"] {
-    background-color: #007bff; /* Blue button color */
+    background-color: #007bff; 
     color: #fff;
     border: none;
     padding: 12px 40px;
@@ -43,5 +43,10 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
+}
+@media screen and (min-width: 769px) {
+    .container {
+        width: 100%; 
+    }
 }

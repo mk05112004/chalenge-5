@@ -1,101 +1,92 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color:rgb(113, 168, 191);
+      color: black; 
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+  
+  }
+  
+  .container {
+      background-color: white; 
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      height: auto;
+      display: grid;
+  
+  
+  }
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #03a9f4; /* Vibrant blue background color for the entire page */
-    color: black; /* Text color */
-    position: relative;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    
-}
-
-.container {
-    background-color: white; /* Pink background color for the container */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 75%;
-    height: auto;
-    display: grid;
-    
-
-}
-
-input[type="url"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    
-    border: 1px solid #717171;
-    font-size: 16px;
-    font-weight: bold;
-    outline: none;
-    border-radius: 4px;
-    background-color: #fff; /* White background color for input fields */
-}
-
-button {
-    background-color: #ffbd69; /* Vibrant yellow button color */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-button:hover {
-    background-color: #ff9a8b; /* Button color on hover */
-}
-
-p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-a , .shortUrlText {
-    text-decoration: none;
-    cursor: pointer;
-    color: #03a9f4; /* Blue link color */
-}
-
-.OneUrl {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    background-color: green;
-    margin-bottom: 10px;
-    
-    border-radius: 4px;
-    background-color: #f2f1f2;
-    padding: 10px;
-    & > :is(.full , .short) {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        margin-top: 0%;
-        & > .shortUrlText {
-            margin-top: 5%;
-            word-break: break-all;
-            background-color: transparent;
-            color: #03a9f4;
-            font-size: 1.1rem;
-          
-        }
-
-        & > a {
-            margin-top: 0%;
-            word-break: break-all;
-        }
-
-        
-    }
+  @media screen and (max-width: 769px) {
+      .container {
+          margin: 100px auto;
+          width: 100%;
+      }
+  }
  
-}
+  input[type="url"] {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 10px;
+  
+      border: 1px solid #717171;
+      font-size: 16px;
+      font-weight: bold;
+      outline: none;
+      border-radius: 4px;
+      background-color: #fff;
+  }
+  
+  button {
+      background-color: #ffbd69; 
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+  }
+  
+  button:hover {
+      background-color: #ff9a8b; 
+  }
+  
+  p {
+      font-size: 18px;
+      margin-top: 10px;
+  }
+  
+  a {
+      text-decoration: none;
+      color: #03a9f4; 
+  }
+  
+  .OneUrl {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      background-color: green;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f2f1f2;
+      & > :is(.full , .short) {
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          & > a {
+              margin-top: 6%;
+              word-break: break-all;
+          }
+      }
+   
+  }
 
-/* Add more custom styles as needed */
